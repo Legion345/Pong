@@ -1,0 +1,16 @@
+let paddleHeight = 150;
+let paddleWidth = 10;
+let ballRadius = 25;
+let halfPaddleHeight = paddleHeight / 2;
+let paddleSpeed1 = 0;
+let paddle1Position = 460;
+let paddleSpeed2 = 0;
+let paddle2Position = 460;
+let topBallPosition = 510;
+let leftBallPosition = 820;
+let topBallSpeed = 0;
+let leftBallSpeed = 0;
+let score1 = 0;
+let score2 = 0;
+let speedIncrement = 0.001;
+let maxSpeed = 20;
