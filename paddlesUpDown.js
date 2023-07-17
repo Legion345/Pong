@@ -1,3 +1,4 @@
+// Keydown movement function for W, S, (paddle1) Up Arrow, Down Arrow (paddle2)
 document.addEventListener('keydown', function (e) {
     if (e.keyCode == 87 || e.which == 87) { // W key
         paddle1Position -= 20;
@@ -17,6 +18,7 @@ document.addEventListener('keydown', function (e) {
     }
 }, false);
 
+// Keydown movement speed for each paddle
 document.addEventListener('keydown', function (e ) {
     if (e.keyCode == 87 || e.which == 87) { // W key
         paddleSpeed1 = -20;
@@ -32,7 +34,7 @@ document.addEventListener('keydown', function (e ) {
     }
 }, false);
 
-// This function gets called 60 times per second
+// setInterval function for paddles speed and height barrier
 window.setInterval(function show() {
     paddle1Position += paddleSpeed1;
     paddle2Position += paddleSpeed2;
@@ -54,6 +56,7 @@ window.setInterval(function show() {
     document.getElementById("paddle2").style.top = (paddle2Position) + "px";
 }, 1000 / 60);
 
+// Function to stop paddles when key is let go
 document.addEventListener('keyup', function (e) {
     if (e.keyCode == 87 || e.which == 87) {
         paddleSpeed1 = 0;

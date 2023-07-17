@@ -1,13 +1,14 @@
-
-
+// setInvertal function for ball speed and height barrier
 window.setInterval(function show() {
     topBallPosition += topBallSpeed;
     leftBallPosition += leftBallSpeed;
 
+// Ball Height barrier
 if (topBallPosition <= 150 || topBallPosition >= window.innerHeight - ballRadius) {
     topBallSpeed = -topBallSpeed;
 }
 
+// When paddle hits ball, speed is reversed. Else, Score added and ball restarted
 if (leftBallPosition <= paddleWidth) {
     if (topBallPosition > paddle1Position && topBallPosition < paddle1Position + paddleHeight) {
         leftBallSpeed = -leftBallSpeed;
@@ -24,7 +25,7 @@ if (leftBallPosition >= window.innerWidth - ballRadius - paddleWidth) {
         startBall();
     }
 }
-
+// Ball function for speed to incremently increased
 increaseBallSpeed();
 
 document.getElementById("ball").style.top = (topBallPosition) + "px";

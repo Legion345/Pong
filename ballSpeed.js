@@ -1,3 +1,4 @@
+// Ball movement function for left/right movement
 function startBall() {
     topBallPosition = 510;
     leftBallPosition = 820;
@@ -10,5 +11,3 @@ function startBall() {
     topBallSpeed = Math.random() * -2 - 3;
     leftBallSpeed = side * (Math.random() * 2 + 3);
 };
-
-// TODO: ball to increase overtime
