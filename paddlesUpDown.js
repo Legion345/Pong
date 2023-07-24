@@ -19,7 +19,7 @@ document.addEventListener('keydown', function (e) {
 }, false);
 
 // Keydown movement speed for each paddle
-document.addEventListener('keydown', function (e ) {
+document.addEventListener('keydown', function (e) {
     if (e.keyCode == 87 || e.which == 87) { // W key
         paddleSpeed1 = -20;
     }

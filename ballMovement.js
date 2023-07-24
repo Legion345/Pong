@@ -1,3 +1,5 @@
+// TODO: Create Functions for each update
+
 // setInvertal function for ball speed and height barrier
 window.setInterval(function show() {
     topBallPosition += topBallSpeed;
