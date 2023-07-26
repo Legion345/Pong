@@ -1,21 +1,17 @@
-// setInvertal function for ball speed and height barrier
-window.setInterval(function show() {
-    topBallPosition += topBallSpeed;
-    leftBallPosition += leftBallSpeed;
+// Define object to store state of ball
+const ball = {
+    topBallPosition: 510,
+    leftBallPosition: 820,
+    topBallSpeed: 0,
+    leftBallSpeed: 0,
+};
 
-// Ball Height barrier
-if (topBallPosition <= 150 || topBallPosition >= window.innerHeight - ballRadius) {
-    topBallSpeed = -topBallSpeed;
-}
+// Function for ball movement for left/right
+function startBall() {
+    topBallPosition = 510;
+    leftBallPosition = 820;
 
-// Function for ball hitting paddles
-updateBall();
-
-// Ball function for speed to increase incremently
-increaseBallSpeed();
-
-document.getElementById("ball").style.top = (topBallPosition) + "px";
-document.getElementById("ball").style.left = (leftBallPosition) + "px";
-document.getElementById("score1").innerHTML = score1.toString();
-document.getElementById("score2").innerHTML = score2.toString();
-}, 1000 / 60);
+    const side = Math.random() < 0.5 ? 1 : -1;
+    topBallSpeed = Math.random() * -2 - 3;
+    leftBallSpeed = side * (Math.random() * 2 + 3);
+};
