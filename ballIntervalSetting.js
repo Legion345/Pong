@@ -1,4 +1,4 @@
-// setInvertal function for ball speed and height barrier
+// setInterval function for ball speed and height barrier
 window.setInterval(function show() {
     topBallPosition += topBallSpeed;
     leftBallPosition += leftBallSpeed;
