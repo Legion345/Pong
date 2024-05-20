@@ -11,7 +11,7 @@ if (topBallPosition <= 150 || topBallPosition >= window.innerHeight - ballRadius
 // Function for ball hitting paddles
 updateBall();
 
-// Ball function for speed to increase incremently
+// Ball function for speed to increase incrementally
 increaseBallSpeed();
 
 document.getElementById("ball").style.top = (topBallPosition) + "px";
